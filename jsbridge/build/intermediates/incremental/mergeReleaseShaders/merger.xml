@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/home/wangyl/work/code/android/project/opensource/Awesome/Emberwind/jsbridge/src/main/shaders"/></dataSet><dataSet config="release"><source path="/home/wangyl/work/code/android/project/opensource/Awesome/Emberwind/jsbridge/src/release/shaders"/></dataSet></merger>
