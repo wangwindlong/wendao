@@ -32,13 +32,18 @@ import timber.log.Timber;
 public class AppUrls {
 
     private class Urls {
-        static final String BASE = "duckduckgo.com";
-        static final String HOME = "https://www.duckduckgo.com/?ko=-1&kl=wt-wt";
-        static final String AUTOCOMPLETE = "https://www.duckduckgo.com/ac/";
+//        static final String BASE = "duckduckgo.com";
+        static final String BASE = "baidu.com";
+//        static final String HOME = "https://www.duckduckgo.com/?ko=-1&kl=wt-wt";
+        static final String HOME = "https://www.baidu.com/s?pn=10&cl=3&rn=100";
+//        static final String AUTOCOMPLETE = "https://www.duckduckgo.com/ac/";
+        static final String AUTOCOMPLETE = "https://www.baidu.com/s?sr=1";
     }
 
     private class Params {
-        static final String SEARCH = "q";
+//        static final String SEARCH = "q";
+        static final String SEARCH = "wd";
+        static final String PRE_SEARCH = "oq";
     }
 
     private class ParamValues {
@@ -105,7 +110,7 @@ public class AppUrls {
     @NonNull
     public static String getAutocompleteUrl(@NonNull String query) {
         StringBuilder builder = new StringBuilder(Urls.AUTOCOMPLETE);
-        builder.append("/?").append(Params.SEARCH).append("=").append(getEncodedQuery(query));
+        builder.append("&").append(Params.PRE_SEARCH).append("=").append(getEncodedQuery(query));
         return builder.toString();
     }
 

@@ -28,4 +28,7 @@
     <color name="tab_text_secondary">#cccccc</color>
 
     <color name="tab_background">#666666</color>
+
+    <item name="primary" type="color">#444444</item>
+    <item name="primary_dark" type="color">#222222</item>
 </resources>

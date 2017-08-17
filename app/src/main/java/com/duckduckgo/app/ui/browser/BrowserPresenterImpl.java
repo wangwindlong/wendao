@@ -279,7 +279,12 @@ public class BrowserPresenterImpl implements BrowserPresenter {
 
     @Override
     public void requestSearchInCurrentTab(@Nullable String text) {
-        requestSearch(text);
+//        if (browserView == null && (tabs == null || tabs.size() <= 0)) {
+//            requestAction = REQUEST_SEARCH_NEW_TAB;
+//            requestSearch = text;
+//        } else {
+            requestSearch(text);
+//        }
     }
 
     @Override
@@ -305,6 +310,8 @@ public class BrowserPresenterImpl implements BrowserPresenter {
         if (UrlUtils.isUrl(text)) {
             String url = UrlUtils.getUrlWithScheme(text);
             requestLoadUrl(url);
+        } else if (text.startsWith("file:")) {
+            requestLoadUrl(text);
         } else {
             requestQuerySearch(text);
         }
@@ -474,6 +481,8 @@ public class BrowserPresenterImpl implements BrowserPresenter {
         } else if (tabView.canGoBack()) {
             navigateHistoryBackward();
             return true;
+        } else {
+            closeTab(currentIndex);
         }
         return false;
     }

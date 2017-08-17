@@ -1,9 +1,9 @@
 package com.hfut235.emberwind;
 
-import android.app.Application;
-
 import com.duckduckgo.app.Injector;
 import com.hfut235.emberwind.utils.Utils;
+
+import org.geometerplus.android.fbreader.FBReaderApplication;
 
 import timber.log.Timber;
 
@@ -11,7 +11,7 @@ import timber.log.Timber;
  * Created by wangyl on 17-8-15.
  */
 
-public class App extends Application {
+public class App extends FBReaderApplication {
 
     @Override
     public void onCreate() {

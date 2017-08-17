@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Emberwind.iml" filepath="$PROJECT_DIR$/Emberwind.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ambilWarna/ambilWarna.iml" filepath="$PROJECT_DIR$/ambilWarna/ambilWarna.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jsbridge/jsbridge.iml" filepath="$PROJECT_DIR$/jsbridge/jsbridge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/code.iml" filepath="$PROJECT_DIR$/code/code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/superToasts/superToasts.iml" filepath="$PROJECT_DIR$/superToasts/superToasts.iml" />
     </modules>
   </component>
 </project>

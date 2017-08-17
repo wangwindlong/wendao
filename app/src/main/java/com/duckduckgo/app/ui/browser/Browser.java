@@ -19,6 +19,8 @@ package com.duckduckgo.app.ui.browser;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.AttrRes;
@@ -28,11 +30,14 @@ import android.support.annotation.StyleRes;
 import android.util.AttributeSet;
 import android.view.View;
 import android.webkit.CookieManager;
+import android.webkit.DownloadListener;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebStorage;
 import android.webkit.WebView;
 import android.webkit.WebViewDatabase;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.duckduckgo.app.Injector;
 import com.duckduckgo.app.ui.tab.DDGWebView;
@@ -201,6 +206,26 @@ public class Browser extends FrameLayout implements BrowserView {
         webSettings.setJavaScriptEnabled(true);
         webView.setWebViewClient(new DDGWebViewClient(browserPresenter, tabId));
         webView.setWebChromeClient(new DDGWebChromeClient(browserPresenter, tabId));
+
+        webView.setDownloadListener(new DownloadListener() {
+            @Override
+            public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype, long contentLength) {
+                Uri uri = Uri.parse(url);
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                getContext().startActivity(intent);
+            }
+        });
+
+        webSettings.setJavaScriptEnabled(true);
+        webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
+        webSettings.setAllowFileAccess(true);// 设置允许访问文件数据
+        webSettings.setSupportZoom(true);
+        webSettings.setBuiltInZoomControls(true);
+        webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
+        webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+        webSettings.setDomStorageEnabled(true);
+        webSettings.setDatabaseEnabled(true);
+
         return webView;
     }
 

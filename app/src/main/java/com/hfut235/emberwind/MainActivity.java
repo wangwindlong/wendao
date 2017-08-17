@@ -40,6 +40,8 @@ import com.hfut235.emberwind.service.CoreService;
 import com.hfut235.emberwind.utils.LogUtils;
 import com.yanzhenjie.nohttp.tools.NetUtil;
 
+import org.geometerplus.android.fbreader.FBReader;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         MainView, EditBookmarkDialogFragment.OnEditBookmarkListener {
@@ -156,7 +158,8 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-
+            Intent intent = new Intent(this, FBReader.class);
+            startActivity(intent);
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
@@ -260,6 +263,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void handleFirstStart() {
+//        browserPresenter.requestSearchInCurrentTab("file:///android_asset/index.html");
         browserPresenter.requestSearchInNewTab("file:///android_asset/index.html");
     }
 
