@@ -77,4 +77,31 @@
     <!-- Suggestion -->
     <string name="suggestion_content_description_icon_image_view">Autocomplete suggestion</string>
     <string name="suggestion_content_description_add_to_query_button">Add text to query</string>
+
+    <string name="high_score">HIGH SCORE</string>
+    <string name="score">SCORE</string>
+    <string name="instructions">Swipe to move. 2 + 2 = 4. Reach 2048.</string>
+    <string name="you_win">You Win!</string>
+    <string name="game_over">Game Over!</string>
+    <string name="go_on">Tap to Continue</string>
+    <string name="for_now">For now…</string>
+    <string name="endless">"Endless" Mode</string>
+
+    <!-- Confirmation dialog-->
+    <string name="reset">Reset</string>
+    <string name="continue_game">Cancel</string>
+    <string name="reset_dialog_title">Reset game?</string>
+    <string name="reset_dialog_message">Are you sure you wish to reset the game?</string>
+    <string name="header">2048</string>
+
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
 </resources>

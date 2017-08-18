@@ -478,7 +478,7 @@ public class BrowserPresenterImpl implements BrowserPresenter {
         } else if (isEditing) {
             cancelOmnibarFocus();
             return true;
-        } else if (tabView.canGoBack()) {
+        } else if (tabView != null && tabView.canGoBack()) {
             navigateHistoryBackward();
             return true;
         } else {

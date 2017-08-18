@@ -94,13 +94,13 @@ public class ServerStatusReceiver extends BroadcastReceiver {
                 }
                 case CMD_VALUE_STARTED: {
                     if (mActivity != null && mActivity.get() != null) {
-                        mActivity.get().serverHasStarted();
+//                        mActivity.get().serverHasStarted();
                     }
                     break;
                 }
                 case CMD_VALUE_STOP: {
                     if (mActivity != null && mActivity.get() != null) {
-                        mActivity.get().serverStop();
+//                        mActivity.get().serverStop();
                     }
                     break;
                 }
